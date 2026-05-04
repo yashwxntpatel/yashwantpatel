@@ -9,6 +9,8 @@ const links = [
   { label: "Contact", href: "#contact" },
 ];
 
+const WA_LINK = "https://wa.me/919509940400";
+
 export const Nav = memo(() => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -60,9 +62,11 @@ export const Nav = memo(() => {
             ))}
           </ul>
 
-          {/* CTA BUTTON */}
+          {/* CTA BUTTON — opens WhatsApp */}
           <a
-            href="#contact"
+            href={WA_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:inline-flex items-center gap-2 rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background hover:bg-accent hover:text-accent-foreground transition-all duration-300"
           >
             Let's talk <span className="text-xs" aria-hidden="true">→</span>
@@ -101,6 +105,17 @@ export const Nav = memo(() => {
                   {l.label}
                 </a>
               ))}
+
+              {/* MOBILE CTA — also opens WhatsApp */}
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMenu}
+                className="mt-2 px-4 py-3 rounded-xl bg-accent/10 text-accent text-sm font-medium text-center hover:bg-accent/20 transition-colors"
+              >
+                Let's talk →
+              </a>
             </motion.div>
           )}
         </AnimatePresence>
