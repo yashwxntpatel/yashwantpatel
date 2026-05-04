@@ -43,7 +43,7 @@ export const Nav = memo(() => {
                 className="w-full h-full object-cover object-top"
               />
             </span>
-            <span className="font-medium tracking-tight hidden sm:inline">Yashwant Patel</span>
+            <span className="font-medium tracking-tight text-sm">Yashwant Patel</span>
           </a>
 
           {/* DESKTOP NAV LINKS */}
