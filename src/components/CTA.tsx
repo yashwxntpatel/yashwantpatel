@@ -2,6 +2,8 @@ import { memo } from "react";
 import { motion } from "framer-motion";
 import { Magnetic } from "./Magnetic";
 
+const WA_LINK = "https://wa.me/919509940400";
+
 const marqueeText = "Let's build something that actually works · Available for Q3 2026 · Premium frontend & design ·";
 
 export const CTA = memo(() => (
@@ -37,9 +39,13 @@ export const CTA = memo(() => (
             Brief me on your project. I reply within 24 hours with timing, scope, and a straight answer on whether I'm the right fit.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-16">
+
+            {/* Start a project — opens WhatsApp */}
             <Magnetic strength={0.3}>
               <a
-                href="mailto:yashwantpatel.in@gmail.com?subject=Project%20inquiry"
+                href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 rounded-full bg-gradient-amber px-8 py-5 text-base font-medium text-accent-foreground shadow-glow"
               >
                 Start a project
@@ -48,10 +54,13 @@ export const CTA = memo(() => (
                 </svg>
               </a>
             </Magnetic>
+
+            {/* LinkedIn — unchanged */}
             <Magnetic strength={0.25}>
               <a
                 href="https://linkedin.com/in/yashwantxpatel"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 rounded-full glass px-8 py-5 text-base hover:border-foreground/20"
               >
                 LinkedIn
@@ -62,11 +71,20 @@ export const CTA = memo(() => (
           <div className="grid sm:grid-cols-3 gap-6 max-w-2xl mx-auto pt-12 border-t border-border/60 text-sm">
             <div>
               <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-2">Email</div>
-              <a href="mailto:yashwantpatel.in@gmail.com" className="hover:text-accent transition-colors">yashwantpatel.in@gmail.com</a>
+              <a href="mailto:yashwantpatel.in@gmail.com" className="hover:text-accent transition-colors">
+                yashwantpatel.in@gmail.com
+              </a>
             </div>
             <div>
-              <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-2">Phone</div>
-              <a href="tel:+919509940400" className="hover:text-accent transition-colors">+91 95099 40400</a>
+              <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-2">WhatsApp</div>
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent transition-colors"
+              >
+                +91 95099 40400
+              </a>
             </div>
             <div>
               <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-2">Based in</div>
