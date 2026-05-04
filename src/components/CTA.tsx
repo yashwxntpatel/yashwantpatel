@@ -29,7 +29,7 @@ export const CTA = memo(() => (
         >
           <div className="mb-8 inline-flex items-center gap-3 rounded-full glass px-4 py-2 text-xs font-mono uppercase tracking-widest text-muted-foreground">
             <span className="h-2 w-2 rounded-full bg-accent animate-pulse-glow" aria-hidden="true" />
-            Currently taking 2 projects
+            Lets work together
           </div>
           <h2 className="h-display text-6xl md:text-8xl lg:text-9xl mb-8">
             Let's build<br />something that<br />
