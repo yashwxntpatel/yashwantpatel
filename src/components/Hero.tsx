@@ -42,7 +42,7 @@ export const Hero = memo(() => (
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
           <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
         </span>
-        Available for Q3 — 2 slots open
+        Lets Work
       </motion.div>
 
       <h1 className="h-display text-[clamp(3rem,10vw,9rem)] max-w-[14ch]">
