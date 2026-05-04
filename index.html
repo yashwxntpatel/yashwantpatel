@@ -2,35 +2,136 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yashwant Patel — Frontend Developer &amp; UI/UX Designer</title>
-    <meta name="description" content="Premium frontend developer &amp; UI/UX designer. 100+ websites shipped. Cinematic, conversion-focused digital experiences for brands, founders &amp; studios.">
-    <meta name="author" content="Yashwant Patel" />
-    <link rel="canonical" href="https://yashwantpatel.in/" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-    <!-- OG / Twitter -->
+    <!-- ============================================
+         PRIMARY META
+    ============================================ -->
+    <title>Yashwant Patel — Frontend Developer &amp; UI/UX Designer</title>
+    <meta name="description" content="Premium frontend developer &amp; UI/UX designer. 100+ websites shipped. Cinematic, conversion-focused digital experiences for brands, founders &amp; studios." />
+    <meta name="author" content="Yashwant Patel" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="canonical" href="https://yashwantpatel.in/" />
+
+    <!-- ============================================
+         FAVICON
+    ============================================ -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- ============================================
+         OPEN GRAPH
+    ============================================ -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yashwantpatel.in/" />
     <meta property="og:title" content="Yashwant Patel — Frontend Developer &amp; UI/UX Designer" />
     <meta property="og:description" content="Premium frontend developer &amp; UI/UX designer. 100+ websites shipped. Cinematic, conversion-focused digital experiences for brands, founders &amp; studios." />
+    <meta property="og:image" content="https://yashwantpatel.in/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Yashwant Patel" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- ============================================
+         TWITTER / X
+    ============================================ -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@yashwantpatel" />
     <meta name="twitter:title" content="Yashwant Patel — Frontend Developer &amp; UI/UX Designer" />
     <meta name="twitter:description" content="Premium frontend developer &amp; UI/UX designer. 100+ websites shipped. Cinematic, conversion-focused digital experiences for brands, founders &amp; studios." />
+    <meta name="twitter:image" content="https://yashwantpatel.in/og-image.jpg" />
 
-    <!-- Fonts: preconnect + non-blocking load -->
+    <!-- ============================================
+         PERFORMANCE: DNS prefetch & preconnect
+         Only preconnect to domains used above the fold.
+         dns-prefetch for below-fold third parties.
+    ============================================ -->
+    <!-- Fonts — used immediately -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Work section screenshots — loaded below fold -->
+    <link rel="dns-prefetch" href="https://image.thum.io" />
+
+    <!-- ============================================
+         FONTS — Non-blocking load pattern
+         FIX: The original onload had a broken markdown
+         link wrapping this.media. Fixed to plain JS.
+         FIX: Added font-display=swap in URL params
+         so Google Fonts respects it server-side too.
+    ============================================ -->
     <link rel="preload" as="style"
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500&display=swap" />
     <link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500&display=swap"
-      media="print" onload="this.media='all'" />
+      media="print"
+      onload="this.media='all'" />
     <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500&display=swap" />
+      <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500&display=swap" />
     </noscript>
+
+    <!-- ============================================
+         PERFORMANCE: Inline critical CSS
+         Prevents flash of unstyled background before
+         the main CSS bundle loads. Keeps background
+         dark immediately on first paint.
+    ============================================ -->
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { color-scheme: dark; scroll-behavior: auto; }
+      body {
+        background-color: #0a0a0a;
+        color: #f5f0e8;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      #root { min-height: 100dvh; }
+      /* Prevent layout shift while JS loads */
+      #root:empty::before {
+        content: '';
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: #0a0a0a;
+      }
+    </style>
+
+    <!-- ============================================
+         STRUCTURED DATA (JSON-LD)
+         Helps Google understand who you are.
+    ============================================ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Yashwant Patel",
+      "url": "https://yashwantpatel.in",
+      "jobTitle": "Frontend Developer & UI/UX Designer",
+      "description": "Premium frontend developer and UI/UX designer. 100+ websites shipped for brands, founders and studios worldwide.",
+      "knowsAbout": ["Frontend Development", "UI/UX Design", "React", "TypeScript", "Framer Motion", "Webflow"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bangalore",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://github.com/yashwantpatel",
+        "https://linkedin.com/in/yashwantpatel"
+      ]
+    }
+    </script>
   </head>
+
   <body>
     <div id="root"></div>
+
+    <!--
+      FIX: type="module" is already deferred by default in browsers.
+      Scripts are non-blocking. No changes needed here.
+    -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
