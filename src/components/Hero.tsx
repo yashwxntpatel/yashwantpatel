@@ -5,6 +5,7 @@ import { Magnetic } from "./Magnetic";
 const HeroScene = lazy(() => import("./HeroScene").then(m => ({ default: m.HeroScene })));
 
 const EASE = [0.16, 1, 0.3, 1] as const;
+const WA_LINK = "https://wa.me/919509940400";
 
 const word: Variants = {
   hidden: { y: "110%", opacity: 0 },
@@ -91,6 +92,7 @@ export const Hero = memo(() => (
         transition={{ duration: 0.8, delay: 1.4 }}
         className="mt-12 flex flex-wrap items-center gap-4"
       >
+        {/* See selected work — scrolls to work section */}
         <Magnetic strength={0.3}>
           <a
             href="#work"
@@ -102,9 +104,13 @@ export const Hero = memo(() => (
             </svg>
           </a>
         </Magnetic>
+
+        {/* Start a project — opens WhatsApp */}
         <Magnetic strength={0.25}>
           <a
-            href="#contact"
+            href={WA_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center gap-3 rounded-full glass px-7 py-4 text-sm font-medium hover:border-foreground/20 transition-colors"
           >
             <span>Start a project</span>
