@@ -78,8 +78,8 @@ export const CTA = memo(() => (
     </div>
 
     <footer className="container-luxe mt-32 pt-10 border-t border-border/40 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
-      <div>© {new Date().getFullYear()} Yashwant Patel. Crafted with intent.</div>
-      <div className="font-mono">v.1 · Bangalore → World</div>
+      <div>© {new Date().getFullYear()} Yashwant Patel. All Rights Reserved.</div>
+      <div className="font-mono">Bangalore → World</div>
     </footer>
   </section>
 ));
